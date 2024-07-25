@@ -1,0 +1,417 @@
+/*
+    CLASSES UTILIZADAS DINAMICAMENTE
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+html,body{
+    overflow-x: none;
+    height: 100%;
+}
+input{
+    border: 0;
+}
+.center{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.w33{
+    width: 33.3%;
+}
+.w50{
+    padding: 0 10px;
+    width: 50%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+img{
+    width: 100%;
+    max-width: 360px;
+    height: 370px;
+}
+/***********************************/
+/* HEADER */
+header{
+    padding: 20px 0;
+    background-color: #3d437a;
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+nav.desktop ul{
+    position: relative;
+    top: 6px;
+    list-style-type: none;
+}
+nav.desktop li{
+    font-weight: 300;
+    font-size: 15px;
+    padding:  0 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+nav.desktop a{
+    color: white;
+    text-decoration: none;
+}
+nav.desktop a:hover{
+    text-decoration: underline;
+}
+.mobile{
+    display: none;
+}
+/*****/
+/* BANNER */
+.banner-container{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    
+}
+.banner-single{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.overlay{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(51,51,51,0.7);
+}
+.banner-container form{
+    z-index: 3;
+    width: 93%;
+    max-width: 600px;
+  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+.banner-container form h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+.banner-container form input[type=email]{
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background-color: white;
+    color: #333;
+    font-size: 22px;
+    padding-left: 10px;
+    outline: 0;
+    border: 1px solid rgba(0,0,0,0.8);
+}
+.banner-container form input[type=submit]{
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background-color: #00c59e;
+    color: white;
+    font-size: 22px;
+    padding-left: 10px;
+    cursor: pointer;
+    border: 0;
+}
+/*****/
+/* DESCRIÇÃO */
+.descricao-autor{
+    padding: 40px 0;
+}
+.descricao-autor h2{
+    font-size: 28px;
+    font-weight: 300;
+    color: #444;
+}
+.descricao-autor p{
+    font-size: 16px;
+    color: #444;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.descricao-autor .images{
+    width: 370px;
+    height: 360px;
+    background-color: gray;
+}
+/*****/
+/* ESPECIALIDADES */
+.especialidades{
+    background-color: #e2e2e2;
+    padding: 40px 0;
+}
+.especialidades h2.title{
+    font-size: 30px;
+    font-weight: 400;
+    color: #999;
+    text-align: center;
+}
+.box-especialidade{
+    margin: 40px 0;
+    padding: 0 30px;
+    text-align: center;
+}
+.box-especialidade h3{
+    font-size: 39px;
+    color: #404580;
+}
+.box-especialidade h4{
+    color: #bababa;
+    font-size: 25px;
+    font-weight: 300;
+    
+}
+.box-especialidade p{
+    color: #444;
+    font-size: 15px;
+    margin-top: 20px;
+}
+/*****/
+/* EXTRAS */
+.extras{
+    background-color: #404580;
+    padding: 30px 0;
+}
+            /*      DEPOIMENTOS     */
+.extras h2.title{
+    color: white;
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.extras .depoimento-single{
+    padding: 15px 0;
+    border-bottom: 1px solid #5056a0;
+}
+.extras .depoimento-descricao{
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+}
+.extras .nome-autor{
+    font-size: 15px;
+    color: white;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.depoimentos-container, .servicos-container{
+    padding: 0 50px;
+}
+            /*      SERVICOS     */
+.extras .servicos ul{
+    margin: 20px 0;
+}
+.servicos li{
+    font-size: 15px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+/*****/
+/*** contatos ******/
+
+.contato-container{
+    min-height: 773px;
+    padding: 170px 0;
+    text-align: center;
+
+}
+.contato-container input[type=text]{
+    width: 100%;
+    height: 40px;
+    
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    padding-left: 8px;
+    font-size: 16px;
+    max-width: 800px;
+    color: #444;
+}
+.contato-container textarea{
+    width: 100%;
+    height: 120px;
+    max-height: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    font-size: 16px;
+    max-width: 800px;
+    resize: vertical;
+    color: #444;
+}
+.contato-container input[type=submit]{
+    background-color: #80c59e;
+    width: 140px;
+    height: 40px;
+    color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+/*****/
+/* FOOTER  */
+footer{
+    background-color: #313462;
+    padding: 30px 0;
+    text-align: center;
+}
+footer p{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/*****/
+
+/******* ERROR ***********/
+
+.error_404 h2{
+    text-align: center;
+    color: #444;
+    font-weight: 400;
+    border-top: 2px solid #444;
+    font-size: 28px;
+}
+.error_404 p{
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+    font-weight: 300;
+}
+.error_404 a{
+    color: #444;
+}
+
+.wraper-404{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0 2%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    max-width: 1280px;
+    width: 100%;
+}
+
+/****/
+
+/***** bullets *****/
+.bullets{
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+    z-index: 5; 
+}
+.bullets span{
+    margin: 0 10px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color:#222 ;
+}
+
+.bullets span.active-slider{
+    background-color: white;
+}
+/****/
+
+
+/*****  MEDIA QUERIES *****/
+@media screen and (max-width: 768px) {
+    img{
+        float: none  !important;
+        margin: 0 auto;
+        max-width: 500px;
+        display: block;
+    }
+    .w50{
+        padding: 20px;
+        width: 100%;
+    }
+    .w33{
+        width: 100%;
+        padding: 20px;
+    }
+    .box-especialidade{
+        margin: 0;
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: block;
+    }
+    .botao-menu-mobile{
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+    nav.mobile ul{
+        top: 55px;
+        position: absolute;
+        left: 0;
+        z-index: 3;
+        display: none;
+        text-align: center;
+        width: 100%;
+    }
+    nav.mobile li{
+        width: 100%;
+        display: block;
+        background-color: white;
+        border-bottom: 1px solid #ccc;
+        font-size: 17px;
+        font-weight: 300;
+        padding: 8px 0;
+    }
+    nav.mobile a{
+        display: block;
+        color: #444;
+        text-decoration: none;
+    }
+
+}
+/**********         FIM            ************/
